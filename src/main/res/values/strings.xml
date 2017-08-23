@@ -1,0 +1,4 @@
+<resources>
+    <string name="app_name">bronx</string>
+    <string name="activity_label_activity_list">activityList</string>
+</resources>

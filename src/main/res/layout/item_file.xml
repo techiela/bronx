@@ -1,0 +1,42 @@
+<?xml version="1.0" encoding="utf-8"?>
+<layout>
+
+    <data>
+
+        <variable
+            name="file"
+            type="java.io.File" />
+
+        <variable
+            name="clickListener"
+            type="tec.hie.la.bronx.adapter.FilesAdapter.ClickListener" />
+    </data>
+
+    <LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:orientation="vertical">
+
+        <TextView
+            android:id="@+id/name"
+            android:layout_width="wrap_content"
+            android:layout_height="50dp"
+            android:onClick="@{clickListener::click}"
+            android:text="@{file.name}" />
+
+        <TextView
+            android:id="@+id/length"
+            android:layout_width="wrap_content"
+            android:layout_height="50dp"
+            android:onClick="@{clickListener::click}"
+            android:text="@{file.length() + `bytes`}" />
+
+        <TextView
+            android:id="@+id/is_file"
+            android:layout_width="wrap_content"
+            android:layout_height="50dp"
+            android:onClick="@{clickListener::click}"
+            android:text="@{file.isFile() ? `file` : `directory`}" />
+
+    </LinearLayout>
+</layout>

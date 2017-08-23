@@ -1,0 +1,34 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:id="@+id/customTab"
+    android:layout_width="0dp"
+    android:layout_height="wrap_content"
+    android:layout_weight="1"
+    android:gravity="center"
+    android:orientation="horizontal"
+    android:paddingBottom="4dp"
+    android:paddingTop="4dp">
+
+    <RelativeLayout
+        android:layout_width="wrap_content"
+        android:layout_height="26dp">
+
+        <ImageView
+            android:id="@+id/tabIcon"
+            android:layout_width="wrap_content"
+            android:layout_height="13dp"
+            android:layout_centerVertical="true"
+            android:adjustViewBounds="true"
+            android:scaleType="fitCenter" />
+
+        <TextView
+            android:id="@+id/customText"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_centerVertical="true"
+            android:layout_toRightOf="@+id/tabIcon"
+            android:text=""
+            android:textColor="#000000"
+            android:textSize="10sp" />
+    </RelativeLayout>
+</LinearLayout>
