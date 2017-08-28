@@ -18,6 +18,7 @@ import android.widget.Toast;
 import java.util.List;
 
 import tec.hie.la.bronx.R;
+import tec.hie.la.bronx.activity.SendIntentActivity;
 import tec.hie.la.bronx.databinding.ItemActivityBinding;
 
 public class ActivitiesAdapter extends BaseAdapter {
@@ -64,18 +65,24 @@ public class ActivitiesAdapter extends BaseAdapter {
     }
 
     public class ClickListener {
-        public void click(View view) {
-            PackageInfo info = null;
-            try {
-                // TODO use application context
-                PackageManager packageManager = layoutInflater.getContext().getPackageManager();
-                info = packageManager.getPackageInfo(layoutInflater.getContext().getPackageName(), PackageManager.GET_ACTIVITIES);
-            } catch (PackageManager.NameNotFoundException e) {
-                e.printStackTrace();
-            }
-            Intent intent = new Intent();
-            intent.setComponent(new ComponentName(info.applicationInfo.packageName, ((TextView) view).getText().toString()));
+        public void showIntent(View view) {
+            Intent intent = new Intent(layoutInflater.getContext(), SendIntentActivity.class);
+            intent.putExtra("activity", ((TextView) view).getText().toString());
             layoutInflater.getContext().startActivity(intent);
         }
+//
+//        public void start(View view) {
+//            PackageInfo info = null;
+//            try {
+//                // TODO use application context
+//                PackageManager packageManager = layoutInflater.getContext().getPackageManager();
+//                info = packageManager.getPackageInfo(layoutInflater.getContext().getPackageName(), PackageManager.GET_ACTIVITIES);
+//            } catch (PackageManager.NameNotFoundException e) {
+//                e.printStackTrace();
+//            }
+//            Intent intent = new Intent();
+//            intent.setComponent(new ComponentName(info.applicationInfo.packageName, ((TextView) view).getText().toString()));
+//            layoutInflater.getContext().startActivity(intent);
+//        }
     }
 }

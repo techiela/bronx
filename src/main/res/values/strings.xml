@@ -1,4 +1,16 @@
 <resources>
     <string name="app_name">bronx</string>
     <string name="activity_label_activity_list">activityList</string>
+    <string name="activity_label_send_intent">sendIntent</string>
+
+    <string name="start">start</string>
+
+    <string-array name="intentExtraTypes">
+        <item>string</item>
+        <item>int</item>
+        <item>boolean</item>
+        <item>stringArray</item>
+        <item>intArray</item>
+        <item>booleanArray</item>
+    </string-array>
 </resources>

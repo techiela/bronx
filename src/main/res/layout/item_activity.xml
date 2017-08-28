@@ -21,7 +21,8 @@
             android:id="@+id/name"
             android:layout_width="wrap_content"
             android:layout_height="50dp"
-            android:onClick="@{clickListener::click}"
+            android:clickable="true"
+            android:onClick="@{clickListener::showIntent}"
             android:text="@{activityInfo.name}" />
 
     </LinearLayout>
